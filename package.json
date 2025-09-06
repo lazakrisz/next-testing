@@ -4,20 +4,39 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:e2e": "yarn db:e2e & NEXT_PUBLIC_API_MOCKING=true next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "test:e2e": "yarn db:e2e & NODE_ENV=test playwright test",
+    "db:push:e2e": "NEXT_PUBLIC_API_MOCKING=true yarn db:push",
+    "test:e2e:ui": "yarn db:e2e & NODE_ENV=test playwright test --ui",
+    "db:push": "drizzle-kit push",
+    "db:e2e:reset": "docker stop postgres-temp && docker rm postgres-temp",
+    "db:e2e": "docker run --rm --name postgres-temp -e POSTGRES_DB=next-testing -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -p 5432:5432 postgres:latest"
   },
   "dependencies": {
+    "@apollo/client": "^4",
+    "@apollo/client-integration-nextjs": "^0.13.0",
+    "drizzle-orm": "^0.44.5",
+    "drizzle-seed": "^0.3.1",
+    "graphql": "^16.11.0",
+    "next": "15.5.2",
+    "pg": "^8.16.3",
+    "pg-mem": "^3.0.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@playwright/test": "^1.55.0",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.15.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "drizzle-kit": "^0.31.4",
+    "msw": "^2.11.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

@@ -1,0 +1,2 @@
+These are only used when running the application through `yarn dev:e2e`, and not during testing.
+This way we can use the application without having an actual backend service, and also can test / create mocks that we can use in the e2e tests.
