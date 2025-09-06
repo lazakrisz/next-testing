@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Testing E2E Testing example using Playwright MSW
 
-## Getting Started
+This repository includes the following examples:
+* Using Next.js testProxy
+* Testing Server Components (External API calls)
+* Testing Server Actions (External API calls)
+* Testing GraphQL Queries and Mutations using Apollo Client
+* E2E-Testing with Drizzle and Server Components
 
-First, run the development server:
+All e2e examples can be found here: [link](https://github.com/lazakrisz/next-testing/tree/main/e2e)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Examples included:
+* Server Components which are fetching from [external API](https://github.com/lazakrisz/next-testing/blob/main/e2e/shoe.spec.ts)
+* Testing [server actions](https://github.com/lazakrisz/next-testing/blob/main/e2e/form.spec.ts)
+* GraphQL from Server Components and Server Actions can be found [here](https://github.com/lazakrisz/next-testing/blob/main/e2e/graphql.spec.ts) (both queries and mutations!)
+* Tests for Drizzle server components are [here](https://github.com/lazakrisz/next-testing/blob/main/e2e/users.spec.ts)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you have questions please raise an Issue or a PR!

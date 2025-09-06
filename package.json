@@ -2,6 +2,7 @@
   "name": "next-testing",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "dev:e2e": "yarn db:e2e & NEXT_PUBLIC_API_MOCKING=true next dev --turbopack",
